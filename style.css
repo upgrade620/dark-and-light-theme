@@ -1,0 +1,132 @@
+
+/* light theme variable */
+
+:root{
+    --background-color:#F7F7FF;
+    --main-bg-color: #F2F2FF;
+
+    --main-border-color:rgb(213, 211, 216);
+
+    --box-shadow:0 10px 10px rgba(0, 0, 0, 0.493);
+
+    --every-h3s-color:  rgb(34, 34, 34);
+
+    --h4s-color: rgb(34, 34, 34);
+
+    --ps-color:#272727;
+}
+/* dark theme variable */
+
+.dark__theme{
+    --background-color: #181515;
+    --main-bg-color: #1C1C1C ;
+
+    --main-border-color:#797a7a;
+
+    --box-shadow:0 10px 10px rgba(109, 105, 105, 0.404);
+
+    --every-h3s-color:  #ffffff;
+
+    --h4s-color: rgb(249, 255, 254);
+
+    --ps-color:#999999;
+    transition: all 2000ms ease;
+}
+
+.light__theme__transition{
+    transition: all 2000ms ease;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    display: grid;
+    place-items: center;
+    width: 100vw;
+    height: 100vh;
+    background: var(--background-color);
+}
+
+nav{
+    position: fixed;
+    top: 0.5rem;
+    background: var(--main-bg-color);
+    width: 100%;
+    height: 4rem;
+    z-index: 100;
+    border-radius: 9px;
+    box-shadow:var(--box-shadow);
+}
+.nav__items{
+    padding: 0 20px 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+h3{
+    color: var(--every-h3s-color);
+    font-size: 0.9rem;
+}
+
+button{
+    display:grid;
+    place-items: center;
+    padding: 5px 6px;
+    border: none;
+    border-radius: 9px;
+    cursor: pointer;
+    color:#F7F7FF;
+    background: #151111;
+    box-shadow: var(--box-shadow);
+    transition: all 400ms ease;
+}
+
+#to_light_theme{
+    display: none;
+    background: #bcbcbd;
+    color: #0c0b0b;
+}
+
+main{
+    box-shadow: var(--box-shadow);
+    width: 50%;
+    display: grid;
+    place-items: center;
+    border-radius: 12px;
+    border: 5px solid var(--main-border-color);
+    position: absolute;
+    transition: all 400ms ease;
+}
+
+button:hover, main:hover{
+    box-shadow: none;
+    opacity: 0.8;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 1rem;
+}
+
+.container h4{
+    color: var(--h4s-color);
+    font-size: 0.9rem;
+    font-weight: 650;
+}
+
+.container p{
+    color:var(--ps-color);
+    font-size: 0.8rem;
+    font-weight: 600;
+    padding-top: 6px;
+    text-align: justify;
+}
+
